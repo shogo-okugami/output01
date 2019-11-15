@@ -1,6 +1,9 @@
 $(function (){
 
-    var $window = $(window);
+    var $window = $(window),
+        $header = $('.page-header'),
+        headerHeight = $header.height(),
+        $imgArea = $('.js-img-area');
 
     $window.on('load', function(){
 
@@ -8,11 +11,9 @@ $(function (){
         
         var windowHeight = $window.height(),
 
-            headerHeight = $('.page-header').outerHeight(true),
-
             imgHeight = windowHeight - headerHeight ;
 
-        $('.img-area').css('height',imgHeight + 'px');
+        $imgArea.css('height',imgHeight + 'px');
         }  
             settingHeight();
 
@@ -83,11 +84,10 @@ $(function (){
       }
     });
 
-    $('.page-header').each(function(){
+    $header.each(function(){
 
       var $stickyHeader = $(this).find('.sticky-header'),
-          stickyHeaderHeight = $stickyHeader.outerHeight(),
-          headerHeight = $(this).outerHeight();
+          stickyHeaderHeight = $stickyHeader.outerHeight();
 
           $stickyHeader.css({ top: '-' + stickyHeaderHeight + 'px' });
 
@@ -102,7 +102,7 @@ $(function (){
             $window.trigger('scroll')
     });
 
-    $('.js-fade-img-area').each(function(){
+    $imgArea.each(function(){
 
       var $container = $(this),
           $fadeImg = $container.find('.js-fade-img'),
@@ -212,13 +212,27 @@ $(function (){
             $('.js-toggle-sp-menu-target').toggleClass('nav-menu-active');
           }) 
 
-          var headerHight = $('.page-header').outerHeight(true); 
           $("a[href^='#']").on('click',function(){
           var href= $(this).attr("href"),
               target = $(href == "#" || href == "" ? 'html' : href),
-              position = target.offset().top - headerHight; 
+              position = target.offset().top - headerHeight; 
           $("html, body").animate({scrollTop:position}, 500, "linear");
           return false;
    });
-
+          
+          var windowidth = $window.width(),
+              headerPos = $header.offset().top;
+          
+          $window.on('scroll', function(){
+          
+          if(windowidth <= 650){
+            if($window.scrollTop() > headerPos){
+              $header.addClass('is-fixed');
+              $imgArea.css('margin-top',headerHeight);
+            }else{
+              $header.removeClass('is-fixed');
+              $imgArea.css('margin-top','0');
+            }
+          }
+          });
 });  
