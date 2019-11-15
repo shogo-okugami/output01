@@ -135,6 +135,7 @@ h1 a{
 .page-header{
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 nav{
