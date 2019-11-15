@@ -282,6 +282,7 @@ nav{
     line-height: 2.75rem;
     text-align: center;
     padding: 15px;
+    border-box;
 }
 .welcome-img{
     width: 34%;
