@@ -219,20 +219,4 @@ $(function (){
           $("html, body").animate({scrollTop:position}, 500, "linear");
           return false;
    });
-          
-          var windowidth = $window.width(),
-              headerPos = $header.offset().top;
-
-          $window.on('scroll', function(){
-          
-            if(windowidth <= 650){
-              if($window.scrollTop() > headerPos){
-                $header.addClass('is-fixed');
-                $imgArea.css('margin-top',headerHeight);
-              }else{
-                $header.removeClass('is-fixed');
-                $imgArea.css('margin-top','0');
-              }
-            }
-        });
 });  
