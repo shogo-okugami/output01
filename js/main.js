@@ -223,16 +223,16 @@ $(function (){
           var windowidth = $window.width(),
               headerPos = $header.offset().top;
           
-          $window.on('scroll', function(){
+          $window.on('load', function(){
           
-          if(windowidth <= 650){
-            if($window.scrollTop() > headerPos){
-              $header.addClass('is-fixed');
-              $imgArea.css('margin-top',headerHeight);
-            }else{
-              $header.removeClass('is-fixed');
-              $imgArea.css('margin-top','0');
-            }
-          }
+            if(windowidth <= 650){
+              
+                
+                $($imgArea).css('margin-top',headerHeight);
+                $header.offset({top: headerPos,left: 0});
+              }else{
+                
+                $imgArea.css('margin-top','0');
+              }
           });
 });  
