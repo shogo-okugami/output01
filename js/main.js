@@ -222,17 +222,17 @@ $(function (){
           
           var windowidth = $window.width(),
               headerPos = $header.offset().top;
-          
-          $window.on('load', function(){
+
+          $window.on('scroll', function(){
           
             if(windowidth <= 650){
-              
-                
-                $($imgArea).css('margin-top',headerHeight);
-                $header.offset({top: headerPos,left: 0});
+              if($window.scrollTop() > headerPos){
+                $header.addClass('is-fixed');
+                $imgArea.css('margin-top',headerHeight);
               }else{
-                
+                $header.removeClass('is-fixed');
                 $imgArea.css('margin-top','0');
               }
-          });
+            }
+        });
 });  
