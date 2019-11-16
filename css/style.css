@@ -12,6 +12,8 @@ body{
     line-height: 1.7;
     background: #f0eeec;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body, div, span, object, iframe,
@@ -90,7 +92,6 @@ table {
     border-spacing:0;
 }
  
-/* change border colour to suit your needs */
 hr {
     display:block;
     height:1px;
@@ -133,9 +134,8 @@ h1 a{
 }
 
 .page-header{
-    position: fixed;
-    z-index: 2;
     width: 100%;
+    z-index: 2;
 }
 
 nav{
@@ -656,7 +656,7 @@ dd{
     position: relative;
     width: 40px;
     height: 32px;
-    z-index: 3;
+    z-index: 4;
 }
 
 .menu-trigger span {
@@ -735,7 +735,8 @@ dd{
 
     .welcome-message{
         width: 100%;
-        text-align: left;
+        text-align: center;
+        font-size: 0.95rem;
     }
 
     .welcome-img{
@@ -824,14 +825,15 @@ dd{
 
     .nav-menu{
         display: block;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -100%;
         background: rgba(255, 255, 255, 0.85);
         width: 100%;
         height: 100vh;
         padding-top: 90px;
-        transition: all .5s
+        transition: all .5s;
+        z-index: 3;
     }
 
     .nav-menu-active{
