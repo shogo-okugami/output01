@@ -1,0 +1,34 @@
+$font-color_default: #444;
+
+$site-width: 980px;
+
+$font-size_s: 12px;
+$font-size_m: 14px;
+$font-size_default: 16px;
+$font-size_l: 18px;
+$font-size_xl: 24px;
+$font-size_xxl: 30px;
+$font-size_3l: 38px;
+
+$font-style_default: "Nunito Sans", sans-serif;
+
+$space_s: 5px;
+$space_m: 10px;
+$space_l: 15px;
+$space_xl: 20px;
+$space_xxl: 30px;
+$space_3l: 40px;
+
+//ブレイクポイント変数
+$breakpoints: (
+  "s": "screen and (max-width: 414px)",
+  "m": "screen and (max-width: 768px)",
+  "l": "screen and (max-width: 1000px)",
+  "xl": "screen and (max-width: 1200px)"
+);
+
+@mixin media($breakpoint: s) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

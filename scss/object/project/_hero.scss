@@ -1,0 +1,34 @@
+@import "../../config/variable";
+
+.p-hero {
+  background-image: url("../images/bread01.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &__text {
+    color: #fff;
+    font-size: $font-size_xl*3;
+    text-align: center;
+  }
+  &__scroll {
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    margin: 0 auto;
+    width: 250px;
+    height: 125px;
+    border-radius: 125px 125px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font_size_xl;
+    text-align: center;
+  }
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yamada Bakery</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+  <header class="l-header js-header">
+    <div class="l-header__container">
+      <h1><a class="l-header__title" href="index.html">Yamada Bakery</a></h1>
+      <div class="c-trigger js-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <nav class="l-nav js-nav">
+      <ul class="l-nav__menu">
+        <li><a class="l-nav__item js-nav__item js-home" href="#">Home</a></li>
+        <li><a class="l-nav__item js-nav__item" href="#news">News</a></li>
+        <li><a class="l-nav__item js-nav__item" href="#concept">Concept</a></li>
+        <li><a class="l-nav__item js-nav__item" href="#cafe">Cafe</a></li>
+        <li><a class="l-nav__item js-nav__item" href="#access">Access</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="p-hero js-hero">
+      <p class="p-hero__text">We'll Make Your Day</p>
+      <div class="p-hero__scroll js-scroll">
+        <p>scroll<br>&#9660;</p>
+      </div>
+    </section>
+    <section id="news" class="c-container">
+      <h2 class="c-container__title">News</h2>
+      <p class="c-container__text">店舗情報や新商品のお知らせなど、当店の最新情報を随時更新</p>
+      <div class="c-container__body">
+        <div class="c-panel--new">
+          <div class="c-panel__triangle"></div>
+          <div class="c-panel__info">New!</div>
+          <div class="c-panel__img">
+            <img src="images/news01.jpg" alt="news-image">
+          </div>
+          <div class="c-panel__body">
+            <p class="c-panel__headding">2019.12.12</p>
+            <p class="c-panel__text">
+              サラダメニューに「彩りキャロットラペ」が加わりました。
+            </p>
+          </div>
+        </div>
+        <div class="c-panel--one-fourth">
+          <div class="c-panel__img">
+            <img src="images/news02.jpg" alt="news-image">
+          </div>
+          <div class="c-panel__body">
+            <p class="c-panel__headding">2019.12.5</p>
+            <p class="c-panel__text">
+              今月の新商品「ふんわりレーズンパン」の販売を開始しました。
+            </p>
+          </div>
+        </div>
+        <div class="c-panel--one-fourth">
+          <div class="c-panel__img">
+            <img src="images/news03.jpg" alt="news-image">
+          </div>
+          <div class="c-panel__body">
+            <p class="c-panel__headding">2019.12.1</p>
+            <p class="c-panel__text">
+              カフェメニューに「しっとりチョコケーキ」が加わりました。
+            </p>
+          </div>
+
+        </div>
+        <div class="c-panel--one-fourth">
+          <div class="c-panel__img">
+            <img src="images/news04.jpg" alt="news-image">
+          </div>
+          <div class="c-panel__body">
+            <p class="c-panel__headding">2019.11.30</p>
+            <p class="c-panel__text">
+              毎月恒例月末感謝デー開催中。お買い上げ金額から100円引きサービス。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="c-btn--normal" href="#">more info</a>
+      </div>
+    </section>
+    <div class="p-background-image--concept"></div>
+    <section id="concept" class="c-container">
+      <h2 class="c-container__title">Concept</h2>
+      <p class="c-container__text">「自然な美味しさ」を追求した天然酵母と国産素材を使って焼き上げるこだわりのパン</p>
+      <div class="c-container__body">
+        <div class="c-panel--one-third c-panel--concept js-panel">
+          <div class="c-panel__img--concept01 js-panel-backgroundImage">
+          </div>
+          <div class="c-panel__body">
+            <div class="c-panel__triangle"></div>
+            <p class="c-panel__headding">安心・安全</p>
+            <p class="c-panel__text">
+              油脂の使用を見直しトランス脂肪酸の低減化を進めることで、身体に安心・安全なパンを提供しています。
+            </p>
+          </div>
+        </div>
+        <div class="c-panel--one-third c-panel--concept js-panel">
+          <div class="c-panel__img--concept02 js-panel-backgroundImage">
+          </div>
+          <div class="c-panel__body">
+            <div class="c-panel__triangle"></div>
+            <p class="c-panel__headding">天然酵母</p>
+            <p class="c-panel__text">
+              フランスで修行を重ねた当店の店主が開発した自家製の天然酵母を使用し、その日の気温や素材の状態を見極めながらパン生地を発酵させています。
+            </p>
+          </div>
+        </div>
+        <div class="c-panel--one-third c-panel--concept js-panel">
+          <div class="c-panel__img--concept03 js-panel-backgroundImage">
+          </div>
+          <div class="c-panel__body">
+            <div class="c-panel__triangle"></div>
+            <p class="c-panel__headding">国産素材</p>
+            <p class="c-panel__text">
+              パンの材料は小麦をはじめ、すべて国産素材を使用しております。厳選された素材による試行錯誤を重ねたこだわりの味をお楽しみください。
+            </p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="c-btn--normal">more info</a>
+    </section>
+    <div class="p-background-image--cafe"></div>
+    <section id="cafe" class="c-container">
+      <h2 class="c-container__title">Cafe</h2>
+      <p class="c-container__text">併設のカフェスペースでランチをお楽しみいただけます。全てのメニューにパンサービス付き。</p>
+      <div class="c-container__body">
+        <div class="c-panel--one-fourth c-panel--cafe js-panel">
+          <div class="c-panel__title">Salad Set</div>
+          <div class="c-panel__img">
+            <img src="images/cafe01.jpg" alt="cafe-image">
+          </div>
+          <div class="c-panel__body">
+            <div class="c-panel__text">
+              <ul>
+                <li>野菜たっぷりサラダ</li>
+                <li>魚介の海鮮サラダ</li>
+                <li>本格フレンチサラダ</li>
+                <li>彩りキャロットラペ</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel--one-fourth c-panel--cafe js-panel">
+          <div class="c-panel__title">Pasta Set</div>
+          <div class="c-panel__img">
+            <img src="images/cafe02.jpg" alt="cafe-image">
+          </div>
+          <div class="c-panel__body">
+            <div class="c-panel__text">
+              <ul>
+                <li>野菜たっぷりパスタ</li>
+                <li>魚介の海鮮シーパスタ</li>
+                <li>濃厚クリームパスタ</li>
+                <li>キノコのバターパスタ</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel--one-fourth c-panel--cafe js-panel">
+          <div class="c-panel__title">Chicken Set</div>
+          <div class="c-panel__img">
+            <img src="images/cafe03.jpg" alt="cafe-image">
+          </div>
+          <div class="c-panel__body">
+            <div class="c-panel__text">
+              <ul>
+                <li>地鶏のグリル焼き</li>
+                <li>ケチャップチキンボール</li>
+                <li>チキンのトマト煮込み</li>
+                <li>豆腐チキンハンバーグ</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="c-panel--one-fourth c-panel--cafe js-panel">
+          <div class="c-panel__title">Cafe Set</div>
+          <div class="c-panel__img">
+            <img src="images/cafe04.jpg" alt="cafe-image">
+          </div>
+          <div class="c-panel__body">
+            <div class="c-panel__text">
+              <ul>
+                <li>ベイクドチーズケーキ</li>
+                <li>しっとり濃厚ティラミス</li>
+                <li>苺のモンブランケーキ</li>
+                <li>しっとりチョコケーキ</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="c-btn--normal">more info</a>
+    </section>
+    <div class="p-background-image--access"></div>
+    <section id="access" class="c-container">
+      <h2 class="c-container__title">Access</h2>
+      <p class="c-container__text">Yamada Bakeryは創業１０周年を迎えます。近くにお越しの際は是非ご来店ください。</p>
+      <div class="c-container__body">
+        <div class="c-container__box">
+          <div class="c-container__box__title">Yamada Bakery</div>
+          <ul>
+            <li>〒150-0034</li>
+            <li>東京都渋谷区代官山町</li>
+            <li>TEL：0120-820-1376</li>
+            <li>営業時間： 7：00~19：00(毎週水曜：定休日)</li>
+          </ul>
+        </div>
+        <div class="c-container__box">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.069962163826!2d139.7020097652868!3d35.650647889256035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b44e6cacbeb%3A0x566d8bd2a5a20a2!2z44CSMTUwLTAwMzQg5p2x5Lqs6YO95riL6LC35Yy65Luj5a6Y5bGx55S6!5e0!3m2!1sja!2sjp!4v1581694563406!5m2!1sja!2sjp"
+            width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="l-footer">
+    <p>&copy; 2020 Yamada Bakery All Rights Reserved</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.p-background-image {
+  @mixin container__background-image($imgPath) {
+  background-image: url($imgPath);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 400px;
+  }
+  &--concept {
+    @include container__background-image("../images/concept.jpg");
+  }
+  &--cafe {
+    @include container__background-image("../images/cafe.jpg");
+  }
+  &--access {
+    @include container__background-image("../images/access.jpg");
+  }
+}

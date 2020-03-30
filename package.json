@@ -1,0 +1,16 @@
+{
+  "name": "Yamada_Bakery",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,56 @@
+@import "../config/variable";
+
+.l-header{
+  z-index: 1;
+  position: fixed;
+  width: 100vw;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.8);
+  box-sizing: border-box;
+  @include media(){
+    padding: $space_xxl 0;
+  }
+  &__container {
+    width: $site-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    @include media(){
+      width: 100%;
+      align-items: center;
+    }
+  }
+  &__title{
+    padding: $space_3l 0 $space_xl;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: $font-color_default;
+    font-size: $font-size_xl*2;
+    position: relative;
+    @include media(){
+      font-size: $font-size_xxl;
+      padding: 0;
+      margin-left: 20px;
+    }
+    &::before {
+      content: '';
+      background-image: url(../images/title-icon.svg);
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: -20%;
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      margin-top: -25px;
+      @include media(){
+        width: 35px;
+        height: 35px;
+        top: 60%;
+      }
+   }
+  }
+}

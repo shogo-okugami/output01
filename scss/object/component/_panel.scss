@@ -1,0 +1,165 @@
+@import "../../config/variable";
+
+@mixin panel {
+  margin-right: $space_l;
+  border: 1px solid #bdb8b8;
+  text-align: left;
+  position: relative;
+  box-sizing: border-box;
+}
+@mixin panel__img--concept {
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+.c-panel {
+  &--one-fourth {
+    @include panel;
+    width: calc(25% - 15px);
+    @include media(){
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $space_xxl;
+    }
+  }
+  &--one-third {
+    @include panel;
+    width: calc(33% - 15px);
+    @include media(){
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $space_xxl;
+    }
+  }
+  &--concept {
+    @include panel;
+    border: none;
+    @include media(){
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    & .c-panel__body {
+      background: #eee;
+      position: relative;
+      min-height: 150px;
+    }
+    & .c-panel__triangle {
+      position: absolute;
+      top: -20%;
+      left: 45%;
+      border-top: 20px solid #eee;
+      border-left: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid transparent;
+      transform: rotate(180deg);
+    }
+    & .c-panel__headding {
+      letter-spacing: 5px;
+      border-bottom: 4px dashed #fff;
+      &::first-letter {
+        font-size: $font-size_xl;
+        color: #fc8ee0;
+      }
+    }
+  }
+  &--cafe {
+    @include panel;
+    border: none;
+    @include media(){
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    & .c-panel__body {
+      background: #eee;
+    }
+    & .c-panel__text {
+      padding: 0;
+    }
+  }
+  &__title {
+    padding: $space_m;
+    text-align: center;
+    background: #ffde4b;
+    color: #fff;
+    @include media(){
+      padding: $space_xl;
+      font-size: $font-size_xl;
+    }
+  }
+  &__body {
+    padding: $space_l;
+  }
+  &__headding {
+    @include media(){
+      font-size: $font-size_l;
+    }
+  }
+  &__text {
+    padding-top: $space_l;
+    & ul {
+      list-style: inside;
+      list-style-type: disc;
+    }
+  }
+  &__img {
+    &--concept01 {
+      @include panel__img--concept;
+      background-image: url(../images/concept01.jpg);
+      background-position: left;
+    }
+    &--concept02 {
+      @include panel__img--concept;
+      background-image: url(../images/concept02.jpg);
+      background-position: center;
+    }
+    &--concept03 {
+      @include panel__img--concept;
+      background-image: url(../images/concept03.jpg);
+      background-position: center;
+    }
+    & img {
+      max-width: 100%;
+      height: 160px;
+      @include media(){
+        height: 288px;
+      }
+    }
+  }
+  &__triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 45px solid #ffde4b;
+    border-right: 45px solid transparent;
+    border-left: 45px solid #ffde4b;
+    border-bottom: 45px solid transparent;
+    @include media(){
+      top: -1%;
+      left: -1%;
+    }
+  }
+  &__info {
+    font-size: $font-size_l;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    color: #fff;
+    @include media(){
+      top: 3%;
+    }
+  }
+  &--new {
+    margin-right: $space_l;
+    width: calc(25% - 15px);
+    text-align: left;
+    position: relative;
+    border: 5px solid #ffde4b;
+    @include media(){
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $space_xxl;
+    }
+  }
+}

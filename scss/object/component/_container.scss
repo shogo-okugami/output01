@@ -1,0 +1,65 @@
+@import "../../config/variable";
+
+.c-container {
+  padding: $space_3l * 2 0 $space_3l;
+  margin: 0 auto;
+  width: $site-width;
+  text-align: center;
+  @include media(){
+    width: 100%;
+    padding-left: $space_xl;
+    padding-right: $space_xl;
+    box-sizing: border-box;
+  }
+  &__body {
+    display: flex;
+    margin-right: -$space_l;
+    margin-bottom: $space_3l;
+    @include media(){
+      flex-wrap: wrap;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  &__box {
+    width: calc(50%);
+    text-align: left;
+    @include media(){
+      width: 100%;
+    }
+    &__title {
+      color: $font-color_default;
+      font-size: $font-size_default * 2;
+      margin-bottom: $space_3l;
+    }
+    & li {
+      font-size: $font-size_l;
+      margin-bottom: $space_m;
+    }
+  }
+  &__title {
+    font-size: $font-size_default * 2;
+    margin-bottom: $space_xxl;
+    position: relative;
+    vertical-align: middle;
+    color: #fc8ee9;
+    &::before {
+      content: "";
+      background-image: url(../images/title-icon.svg);
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 40%;
+      width: 40px;
+      height: 40px;
+      background-size: contain;
+      margin-top: -25px;
+      @include media(){
+        left: 25%;
+      }
+    }
+  }
+  &__text {
+    margin-bottom: $space_xxl;
+  }
+}

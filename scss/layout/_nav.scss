@@ -1,0 +1,46 @@
+@import "../config/variable";
+
+.l-nav {
+  width: $site-width;
+  margin: 0 auto;
+  @include media(){
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: all .5s;
+    background: rgba(255,255,255,0.8);
+  }
+  &.is-active {
+    width: 100%;
+    display: block;
+    transform: translateX(-100%);
+    z-index: 2;
+    transition: all .5s;
+  }
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    @include media(){
+      display: block;
+      padding-top: $space_3l * 3;
+    }
+  }
+  &__item {
+    display: block;
+    text-decoration: none;
+    color: $font-color_default;
+    padding: $space_l;
+    font-size: $font-size_xl;
+    text-align: center;
+    @include media(){
+      font-size: $font-size_xxl;
+    }
+    &:hover {
+      color: #fc8ee9;
+      cursor: pointer;
+    }
+  }
+}
