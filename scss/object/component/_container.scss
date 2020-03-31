@@ -5,7 +5,7 @@
   margin: 0 auto;
   width: $site-width;
   text-align: center;
-  @include media(){
+  @include media() {
     width: 100%;
     padding-left: $space_xl;
     padding-right: $space_xl;
@@ -15,7 +15,7 @@
     display: flex;
     margin-right: -$space_l;
     margin-bottom: $space_3l;
-    @include media(){
+    @include media() {
       flex-wrap: wrap;
       width: 100%;
       box-sizing: border-box;
@@ -24,7 +24,7 @@
   &__box {
     width: calc(50%);
     text-align: left;
-    @include media(){
+    @include media() {
       width: 100%;
     }
     &__title {
@@ -43,21 +43,6 @@
     position: relative;
     vertical-align: middle;
     color: #fc8ee9;
-    &::before {
-      content: "";
-      background-image: url(../images/title-icon.svg);
-      position: absolute;
-      display: block;
-      top: 50%;
-      left: 40%;
-      width: 40px;
-      height: 40px;
-      background-size: contain;
-      margin-top: -25px;
-      @include media(){
-        left: 25%;
-      }
-    }
   }
   &__text {
     margin-bottom: $space_xxl;

@@ -2,6 +2,7 @@ $(function () {
 
   var $window = $(window),
       $trigger = $('.js-trigger');
+      
   //ハンバーガーメニュー
   $trigger.on('click', function () {
     $(this).toggleClass('is-active');
@@ -37,19 +38,11 @@ $(function () {
     $("html, body").stop().animate({ scrollTop: position }, 1000, "swing");
     return false;
   });
+
   $('.js-home').on('click', function () {
     var bodyPos = $('body').offset().top;
     $("html, body").stop().animate({ scrollTop: bodyPos }, 1000, "swing");
     return false;
   });
 
-  $window.on('scroll', function () {
-    var scrollText = $('.js-scroll').children('p'),
-      bodyPos = $('body').offset().top;
-    if ($window.scrollTop() > bodyPos) {
-      scrollText.fadeOut();
-    } else {
-      scrollText.fadeIn();
-    }
-  });
 });  

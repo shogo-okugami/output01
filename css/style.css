@@ -200,20 +200,6 @@ img {
     position: relative;
     vertical-align: middle;
     color: #fc8ee9; }
-    .c-container__title::before {
-      content: "";
-      background-image: url(../images/title-icon.svg);
-      position: absolute;
-      display: block;
-      top: 50%;
-      left: 40%;
-      width: 40px;
-      height: 40px;
-      background-size: contain;
-      margin-top: -25px; }
-      @media screen and (max-width: 414px) {
-        .c-container__title::before {
-          left: 25%; } }
   .c-container__text {
     margin-bottom: 30px; }
 
@@ -434,7 +420,6 @@ img {
 
 .p-hero {
   background-image: url("../images/bread01.jpg");
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
